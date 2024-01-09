@@ -1,3 +1,4 @@
+.gitignore
 # Logs
 logs
 *.log
@@ -15,8 +16,9 @@ dist-ssr
 firebase.json
 .firebaserc
 .firebase
-assets
-
+/assets
+*.psd
+*Old.*
 
 # Editor directories and files
 .vscode/*

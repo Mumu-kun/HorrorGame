@@ -32,7 +32,7 @@ function generateGhostData(HEIGHT: MutableRefObject<number>, WIDTH: MutableRefOb
 	const ghostData: GhostData = {
 		posX: 0,
 		posY: 0,
-		speed: 1000 + Math.random() * 2000,
+		speed: 1200 + Math.random() * 1500,
 		id: uuidv4(),
 		facingRight: true,
 		isCat: Math.random() < 0.5,
