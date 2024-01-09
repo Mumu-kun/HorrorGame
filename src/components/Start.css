@@ -1,0 +1,21 @@
+.startText {
+	color: white;
+	font-family: "Smooch Sans", sans-serif;
+	font-weight: 600;
+	font-size: 100px;
+	opacity: 0;
+
+	transition: all 1500ms;
+	cursor: default;
+}
+
+.startBtn {
+	transition: all 1000ms;
+	cursor: pointer;
+}
+
+.startBtn:hover {
+	text-shadow: 0 0 5px white;
+	letter-spacing: 2px;
+	transform: scale(1.05);
+}

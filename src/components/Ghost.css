@@ -1,0 +1,62 @@
+.ghost {
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	top: -12.5px;
+	left: -12.5px;
+	image-rendering: pixelated;
+	cursor: pointer;
+	z-index: 3000;
+
+	--before-y: 0;
+	--before-opacity: 0;
+	/* --before-content: ""; */
+}
+
+.ghost::before {
+	content: attr(before-content);
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+	padding: 0 2px;
+
+	font-size: 8px;
+
+	transform: translateY(var(--before-y));
+	opacity: var(--before-opacity);
+	transition: all 200ms;
+}
+
+@keyframes spriteAnimation {
+	100% {
+		background-position: 0 -100px;
+	}
+}
+
+@keyframes deathAnimation {
+	100% {
+		background-position: 0 -75px;
+	}
+}
+
+@keyframes catSit {
+	100% {
+		background-position: -75px 0;
+	}
+}
+
+@keyframes catIdle {
+	100% {
+		background-position: -125px 0;
+	}
+}
+
+@keyframes movement {
+	100% {
+		transform: translate(var(--centerX), var(--centerY)) translate(-50%, -50%) scale(3);
+	}
+}
