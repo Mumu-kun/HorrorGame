@@ -9,25 +9,9 @@ import Meow from "../assets/audio/meow.wav";
 import { GhostData } from "./Game";
 import { useRef, MutableRefObject, useState, useEffect } from "react";
 
-const TEXTS = [
-	"Happy Birthday!",
-	"mew",
-	"Prettiest!",
-	"Electrocute",
-	"রূপসী নারী",
-	"Stay Mischievous",
-	"Eyes I can get lost in",
-	"U make me feel warm inside",
-	"RADIANT!!",
-	"Thanks for lighting up my days",
-];
+const TEXTS = ["Boo!"];
 function getRandText(): string {
-	const rand = Math.random() * 100;
-	if (rand <= 98) {
-		return TEXTS[Math.floor(Math.random() * TEXTS.length)];
-	} else {
-		return "love you";
-	}
+	return TEXTS[0];
 }
 
 type GhostProps = {
@@ -119,10 +103,10 @@ function Ghost(props: GhostProps) {
 			setTimeout(() => {
 				audioRef.current.volume = 0.1;
 				audioRef.current.play();
-				audioRef.current.volume = 1;
+				audioRef.current.volume = 0.2;
 
 				if (ghostRef.current && props.isCat) {
-					ghostRef.current.setAttribute("before-content", "Happy Birthday!");
+					ghostRef.current.setAttribute("before-content", "Boo!");
 					ghostRef.current.style.setProperty("--before-y", "-15px");
 					ghostRef.current.style.setProperty("--before-opacity", "1");
 				}

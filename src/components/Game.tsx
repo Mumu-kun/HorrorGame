@@ -32,7 +32,7 @@ function generateGhostData(HEIGHT: MutableRefObject<number>, WIDTH: MutableRefOb
 	const ghostData: GhostData = {
 		posX: 0,
 		posY: 0,
-		speed: 1500 + Math.random() * 2000,
+		speed: 1000 + Math.random() * 2000,
 		id: uuidv4(),
 		facingRight: true,
 		isCat: Math.random() < 0.5,
@@ -65,8 +65,8 @@ function stextUpdate(
 	let count = 1;
 	let countAdd = -8;
 	const typeInterval = setInterval(() => {
-		const text = "HAPPY BIRTHDAY!";
-		const textAdd = " (Pet the cats)";
+		const text = "Boo!";
+		const textAdd = "";
 		if (count <= text.length) {
 			typeSFX.currentTime = 0;
 			typeSFX.play();
